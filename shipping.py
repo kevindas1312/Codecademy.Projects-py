@@ -10,7 +10,7 @@ else:
   cost_ground = weight * 4.75 + 20
 
 
-print(f"{cost_ground:.2f}")
+print(f"{cost_ground:.2f}") #used f"text {variable:.2f}" syntax to print the price of ground cost of 2 decimal places
 
 cost_ground_premium = 125.00
 print(f"Ground Shipping Premium ${cost_ground_premium:.2f}")
