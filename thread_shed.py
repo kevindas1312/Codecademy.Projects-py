@@ -105,20 +105,18 @@ green&white;,;09/15/17,   Gail Phelps   ;,;$30.52
 ;,; green&white&blue   ;,; 09/15/17 , Myrtle Morris 
 ;,;   $22.66   ;,; green&white&blue;,;09/15/17"""
 
-#------------------------------------------------
-# Start coding below!
 
 daily_sales_replaced= daily_sales.replace(";,;", ';')
 print(daily_sales_replaced,'\n\n\n')
 daily_transactions = daily_sales_replaced.split(",")
-print(daily_transactions,'\n\n\n\n')
+print(daily_transactions,'\n\n\n')
 
 daily_transactions_split = []
 for i in daily_transactions :
-  daily_transactions_split.append(i.split(';'))
+  daily_transactions_split.append(i.split(';')) #to split the ;,; characters apart
 print(daily_transactions_split,'\n\n\n')
 
-transactions_clean = [[item.strip() for item in row]for row in daily_transactions_split]
+transactions_clean = [[item.strip() for item in row]for row in daily_transactions_split] #using list comprehension technique
 print(transactions_clean)
 
 customers=[]
@@ -146,7 +144,7 @@ print(total_sales)
 thread_sold_split = []
 for item in thread_sold :
   for colour in item.split('&'):
-    thread_sold_split.append(colour)
+    thread_sold_split.append(colour) 
 
 print(thread_sold_split)
 
@@ -160,5 +158,5 @@ def colour_count(colour = ''):
 colors = ['red', 'yellow', 'green', 'white', 'black', 'blue', 'purple']
 
 for i in colors:
-  print("Thread Shed sold {} threads of {} thread today.".format(colour_count(i),i))
+  print("Thread Shed sold {} threads of {} thread today.".format(colour_count(i),i)) #used .format() to display number of sold threads for the 7 different colours
 
